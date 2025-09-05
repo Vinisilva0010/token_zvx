@@ -80,7 +80,7 @@ function AboutSection() {
           animate={isInView ? "visible" : "hidden"}
           className="grid md:grid-cols-3 gap-8"
         >
-          {benefits.map((benefit, index) => (
+          {benefits.map((benefit) => (
             <motion.div
               key={benefit.title}
               variants={itemVariants}
@@ -145,7 +145,7 @@ function AboutSection() {
             { value: "50", label: "Comunidade", suffix: "%" },
             { value: "100", label: "Descentralizado", suffix: "%" },
             { value: "24/7", label: "Automação", suffix: "" }
-          ].map((stat, index) => (
+          ].map((stat) => (
             <motion.div
               key={stat.label}
               variants={itemVariants}

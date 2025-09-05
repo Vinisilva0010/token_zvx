@@ -129,7 +129,7 @@ export default function Footer() {
             >
               <h4 className="text-white font-semibold mb-4">{section.title}</h4>
               <ul className="space-y-3">
-                {section.links.map((link, linkIndex) => (
+                {section.links.map((link) => (
                   <li key={link.name}>
                     <motion.a
                       href={link.url}
@@ -239,4 +239,3 @@ export default function Footer() {
     </footer>
   );
 }
-

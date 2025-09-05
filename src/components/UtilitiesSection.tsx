@@ -94,7 +94,7 @@ export default function UtilitiesSection() {
           animate={isInView ? "visible" : "hidden"}
           className="grid md:grid-cols-2 lg:grid-cols-2 gap-8"
         >
-          {utilities.map((utility, index) => (
+          {utilities.map((utility) => (
             <motion.div
               key={utility.title}
               variants={itemVariants}
@@ -254,4 +254,3 @@ export default function UtilitiesSection() {
     </section>
   );
 }
-

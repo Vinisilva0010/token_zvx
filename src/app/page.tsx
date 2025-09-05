@@ -105,6 +105,9 @@ const backgroundImages = {
       
       {/* Navigation */}
       <Navbar />
+
+      
+
       
       {/* Hero Section - Com Imagem de Fundo e Efeitos */}
       <section className="relative min-h-screen overflow-hidden">

@@ -13,7 +13,13 @@ const tokenomicsData = [
   { name: 'Marketing', value: 5, color: '#f59e0b', description: 'Campanhas de marketing e crescimento da comunidade' }
 ];
 
-const CustomTooltip = ({ active, payload }: { active?: boolean; payload?: any[] }) => {
+interface CustomTooltipProps {
+  active?: boolean;
+  payload?: { payload: typeof tokenomicsData[0] }[];
+}
+
+
+const CustomTooltip = ({ active, payload }: CustomTooltipProps) => {
   if (active && payload && payload.length) {
     const data = payload[0].payload;
     return (
@@ -191,7 +197,7 @@ export default function TokenomicsSection() {
             { title: "Blockchain", value: "Ethereum", description: "Rede principal segura e descentralizada" },
             { title: "Padrão", value: "ERC-20", description: "Compatibilidade total com carteiras e exchanges" },
             { title: "Queima", value: "Deflacionário", description: "Mecanismo de queima para valorização" }
-          ].map((info, index) => (
+          ].map((info) => (
             <motion.div
               key={info.title}
               variants={itemVariants}
